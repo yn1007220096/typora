@@ -18,7 +18,7 @@ IDEA中“.vmoptions”文件有2份
 
 ## 2.import本项目的类失败
 
-![img](/Users/yunan10/Desktop/150/md/idea.assets/img.png)
+![image-20220526160912870](https://raw.githubusercontent.com/yn1007220096/picture/master/202205261609919.png)
 
 ```
 如图，本项目的类是存在的，pom也引入对应的包，但还是找不到
@@ -39,7 +39,7 @@ IDEA中“.vmoptions”文件有2份
 
 Help Edit Custom VM Options
 
-![image-20220512165120778](/Users/yunan10/Desktop/150/md/idea.assets/image-20220512165120778.png)
+![image-20220526160737315](https://raw.githubusercontent.com/yn1007220096/picture/master/202205261607889.png)
 
 # 插件
 
@@ -63,10 +63,9 @@ Help Edit Custom VM Options
 
 ![多个项目在同一个窗口中打开](https://img2020.cnblogs.com/blog/1400924/202102/1400924-20210228192003995-1419673918.png)
 
-![image-20220512163854174](/Users/yunan10/Desktop/150/md/idea.assets/image-20220512163854174.png)
+![image-20220526160814678](https://raw.githubusercontent.com/yn1007220096/picture/master/202205261608725.png)
 
 Mac 还需设置一下
 
 ![mac 设置](https://img2020.cnblogs.com/blog/1400924/202102/1400924-20210228192004882-1466913943.png)
-
 
