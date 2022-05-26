@@ -73,7 +73,7 @@ HashMap 巧妙的将数组和链表结合在一起，发挥各自优势，使用
 
 如下图，当 n 不为 2 的 N 次方时，hash 冲突的概率明显增大。
 
-![image-20220525111521577](https://raw.githubusercontent.com/yn1007220096/typora/master/picture/202205251115659.png)
+![image-20220525111521577](https://raw.githubusercontent.com/yn1007220096/picture/master/202205251115659.png)
 
 ### 10、“大于等于该容量的最小的2的N次方”是怎么算的？
 
@@ -94,17 +94,17 @@ static final int tableSizeFor(int cap) {
 
 |=（或等于）：例如：a |= b ，可以转成：a = a | b。
 
-![image-20220525110152581](https://raw.githubusercontent.com/yn1007220096/typora/master/picture/202205251101772.png)
+![image-20220525110152581](https://raw.githubusercontent.com/yn1007220096/picture/master/202205251101772.png)
 
 
 
 ">>>"(无符号右移）：例如 a >>> b 将 a 向右移动 b 个位数，左边补0，移出右边的丢弃
 
-![image-20220525110656678](https://raw.githubusercontent.com/yn1007220096/typora/master/picture/202205251106753.png)
+![image-20220525110656678](https://raw.githubusercontent.com/yn1007220096/picture/master/202205251106753.png)
 
 假设 n 的值为 0010 0001，计算如下图：
 
-![image-20220525110742606](https://raw.githubusercontent.com/yn1007220096/typora/master/picture/202205251107677.png)
+![image-20220525110742606](https://raw.githubusercontent.com/yn1007220096/picture/master/202205251107677.png)
 
 相信你应该看出来，这5个公式会通过最高位的1，拿到2个1、4个1、8个1、16个1、32个1。当然，有多少个1，取决于入参，但经过这5次计算，得到的值是一个低位全是1的值，最后返回的时候 +1，则会得到1个比n 大的 2 的N次方。
 
@@ -114,7 +114,7 @@ static final int tableSizeFor(int cap) {
 
 ### 11、插入流程？
 
-![image-20220525110821102](https://raw.githubusercontent.com/yn1007220096/typora/master/picture/202205251108171.png)
+![image-20220525110821102](https://raw.githubusercontent.com/yn1007220096/picture/master/202205251108171.png)
 
 ### 12、插入流程的图里刚开始有个计算 key 的 hash 值，怎么设计的？
 
@@ -133,11 +133,11 @@ static final int hash(Object key) {
 
 例如下图，如果高位不参与运算，由于 n - 1 是 0000 0111，所以结果只取决于 hash 值的低3位，无论高位怎么变化，结果都是一样的。
 
-![image-20220525111319399](https://raw.githubusercontent.com/yn1007220096/typora/master/picture/202205251113469.png)
+![image-20220525111319399](https://raw.githubusercontent.com/yn1007220096/picture/master/202205251113469.png)
 
 如果高位参与运算，则索引计算结果就不会仅取决于低位。
 
-![image-20220525111343618](https://raw.githubusercontent.com/yn1007220096/typora/master/picture/202205251113708.png)
+![image-20220525111343618](https://raw.githubusercontent.com/yn1007220096/picture/master/202205251113708.png)
 
 ### 14、扩容（resize）流程介绍下？
 
@@ -200,15 +200,15 @@ PS：这个流程较难理解，建议对着代码自己模拟走一遍。
 
 1）在2个线程都插入节点，触发扩容流程之前
 
-![image-20220525111410659](https://raw.githubusercontent.com/yn1007220096/typora/master/picture/202205251114726.png)
+![image-20220525111410659](https://raw.githubusercontent.com/yn1007220096/picture/master/202205251114726.png)
 
 2）线程1进行扩容，执行到代码：Entry<K,V> next = e.next 后被调度挂起
 
-![image-20220525111427409](https://raw.githubusercontent.com/yn1007220096/typora/master/picture/202205251114475.png)
+![image-20220525111427409](https://raw.githubusercontent.com/yn1007220096/picture/master/202205251114475.png)
 
 3）线程1被挂起后，线程2进入扩容流程，并走完整个扩容流程
 
-![image-20220525111446889](https://raw.githubusercontent.com/yn1007220096/typora/master/picture/202205251114958.png)
+![image-20220525111446889](https://raw.githubusercontent.com/yn1007220096/picture/master/202205251114958.png)
 
 由于两个线程操作的是同一个 table，所以该图又可以画成如下图。
 

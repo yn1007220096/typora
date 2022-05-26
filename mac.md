@@ -4,11 +4,9 @@
 
 ## 1.打开应用路径内容
 
-![image-20220525112059005](https://raw.githubusercontent.com/yn1007220096/typora/master/picture/202205251120064.png)
+![image-20220525112059005](https://raw.githubusercontent.com/yn1007220096/picture/master/202205251120064.png)
 
 右键显示包内容
-
-
 
 # 命令
 

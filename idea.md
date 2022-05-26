@@ -18,12 +18,11 @@ IDEA中“.vmoptions”文件有2份
 
 ## 2.import本项目的类失败
 
-![image-20220526160912870](https://raw.githubusercontent.com/yn1007220096/picture/master/202205261609919.png)
+本项目的类是存在的，pom也引入对应的包，但还是找不到
 
-```
-如图，本项目的类是存在的，pom也引入对应的包，但还是找不到
 解决：菜单中选择File - Invalidate Caches/Restart...
-```
+
+![image-20220526160912870](https://raw.githubusercontent.com/yn1007220096/picture/master/202205261609919.png)
 
 ## 3.注释模板
 
@@ -31,9 +30,7 @@ IDEA中“.vmoptions”文件有2份
 
 ## 4.idea debug 项目一直debug启动不了,不报错，run项目却可以启动
 
-```
 存在方法断点
-```
 
 ## 5.增加idea内存
 
