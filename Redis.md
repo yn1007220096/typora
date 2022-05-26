@@ -2743,7 +2743,7 @@ Stream：主要用于消息队列，类似于 kafka，可以认为是 pub/sub �
 
 ## 6、Redis 的字符串（SDS）和C语言的字符串区别
 
-![image-20220513213140551](/Users/yunan10/Desktop/150/md/Redis.assets/image-20220513213140551.png) 
+![image-20220525112217297](https://raw.githubusercontent.com/yn1007220096/typora/master/picture/202205251122562.png)
 
 ## 7、Sorted Set底层数据结构
 
@@ -2751,15 +2751,11 @@ Sorted Set（有序集合）当前有两种编码：ziplist、skiplist
 
 ziplist：使用压缩列表实现，当保存的元素长度都小于64字节，同时数量小于128时，使用该编码方式，否则会使用 skiplist。这两个参数可以通过 zset-max-ziplist-entries、zset-max-ziplist-value 来自定义修改。
 
-![image-20220513213253352](/Users/yunan10/Desktop/150/md/Redis.assets/image-20220513213253352.png)
-
- 
+![image-20220525112233417](https://raw.githubusercontent.com/yn1007220096/typora/master/picture/202205251122610.png) 
 
 skiplist：zset实现，一个zset同时包含一个字典（dict）和一个跳跃表（zskiplist）
 
-![image-20220513213349003](/Users/yunan10/Desktop/150/md/Redis.assets/image-20220513213349003.png)
-
- 
+![image-20220525112251084](https://raw.githubusercontent.com/yn1007220096/typora/master/picture/202205251122328.png) 
 
 ## 8、Sorted Set 为什么同时使用字典和跳跃表？
 

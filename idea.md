@@ -25,7 +25,7 @@ IDEA中“.vmoptions”文件有2份
 解决：菜单中选择File - Invalidate Caches/Restart...
 ```
 
-### 3.注释模板
+## 3.注释模板
 
 ### 类模版：
 
@@ -35,7 +35,7 @@ IDEA中“.vmoptions”文件有2份
 存在方法断点
 ```
 
-5.增加idea内存
+## 5.增加idea内存
 
 Help Edit Custom VM Options
 
@@ -68,3 +68,4 @@ Help Edit Custom VM Options
 Mac 还需设置一下
 
 ![mac 设置](https://img2020.cnblogs.com/blog/1400924/202102/1400924-20210228192004882-1466913943.png)
+
